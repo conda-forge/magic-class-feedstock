@@ -23,6 +23,7 @@ requirements:
     - magicgui >=0.3.4
     - python >=3.8
     - qtpy >=1.10.0
+    - superqt >=0.2.5
 
 test:
   imports:
