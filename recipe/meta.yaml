@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/magic-class-{{ version }}.tar.gz
   sha256: 2291e7581936cf929e74290d95959dcecf3f6d4a53857d6c2363bb59e2eed49a
+  patches:
+    - qt.patch
 
 build:
   noarch: python
