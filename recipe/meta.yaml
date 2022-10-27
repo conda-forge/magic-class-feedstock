@@ -1,5 +1,5 @@
 {% set name = "magic-class" %}
-{% set version = "0.6.10" %}
+{% set version = "0.6.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/magic-class-{{ version }}.tar.gz
-  sha256: fcc284addcdcf5e3f4ce99978941cd6210278484faad1d89ef7fb3f48dd900df
+  sha256: 6a1cab6467d57c0dff6edcb57295e26dd55834ed022a22917aa797ab8cf9f87c
 
 build:
   noarch: python
