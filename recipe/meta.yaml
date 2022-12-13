@@ -23,9 +23,10 @@ requirements:
   run:
     - macro-kit >=0.3.5
     - magicgui >=0.5.1
+    - numpy
     - python >=3.8
     - qtpy >=1.10.0
-    - superqt >=0.2.5.post1
+    - superqt >=0.4.0
 
 test:
   imports:
