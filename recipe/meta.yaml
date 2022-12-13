@@ -1,5 +1,5 @@
 {% set name = "magic-class" %}
-{% set version = "0.6.10" %}
+{% set version = "0.6.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/magic-class-{{ version }}.tar.gz
-  sha256: fcc284addcdcf5e3f4ce99978941cd6210278484faad1d89ef7fb3f48dd900df
+  sha256: af91183ae2100314b5a1077787689134be9f5671018a64243c3203df10ab32aa
 
 build:
   noarch: python
@@ -23,9 +23,10 @@ requirements:
   run:
     - macro-kit >=0.3.5
     - magicgui >=0.5.1
+    - numpy
     - python >=3.8
     - qtpy >=1.10.0
-    - superqt >=0.2.5.post1
+    - superqt >=0.4.0
 
 test:
   imports:
