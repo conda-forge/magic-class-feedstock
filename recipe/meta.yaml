@@ -21,12 +21,15 @@ requirements:
     - pip
     - python >=3.8
   run:
+    - docstring_parser
     - macro-kit >=0.3.5
     - magicgui >=0.5.1
     - numpy
+    - psygnal
     - python >=3.8
     - qtpy >=1.10.0
     - superqt >=0.4.0
+    - typing-extensions
 
 test:
   imports:
@@ -39,10 +42,11 @@ test:
     - pyqt
 
 about:
-  home: https://github.com/hanjinliu/magic-class
+  home: https://pypi.org/project/magic-class
   summary: Generate multifunctional GUIs from classes
   license: BSD-3-Clause
   license_file: LICENSE
+  dev_url: https://github.com/hanjinliu/magic-class
 
 extra:
   recipe-maintainers:
