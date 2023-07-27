@@ -1,5 +1,5 @@
 {% set name = "magic-class" %}
-{% set version = "0.6.13" %}
+{% set version = "0.6.14" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/magic-class-{{ version }}.tar.gz
-  sha256: af91183ae2100314b5a1077787689134be9f5671018a64243c3203df10ab32aa
+  sha256: 3e3a85de93d4a5078451b7e938ab8b47e98ced9d3f197c167d255071fa2d7829
 
 build:
   noarch: python
@@ -21,12 +21,15 @@ requirements:
     - pip
     - python >=3.8
   run:
+    - docstring_parser
     - macro-kit >=0.3.5
     - magicgui >=0.5.1
     - numpy
+    - psygnal
     - python >=3.8
     - qtpy >=1.10.0
     - superqt >=0.4.0
+    - typing-extensions
 
 test:
   imports:
@@ -39,10 +42,11 @@ test:
     - pyqt
 
 about:
-  home: https://github.com/hanjinliu/magic-class
+  home: https://pypi.org/project/magic-class
   summary: Generate multifunctional GUIs from classes
   license: BSD-3-Clause
   license_file: LICENSE
+  dev_url: https://github.com/hanjinliu/magic-class
 
 extra:
   recipe-maintainers:
