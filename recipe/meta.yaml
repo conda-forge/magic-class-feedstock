@@ -18,6 +18,7 @@ build:
 
 requirements:
   host:
+    - hatchling
     - pip
     - python >=3.8
   run:
