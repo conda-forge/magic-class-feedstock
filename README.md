@@ -3,11 +3,13 @@ About magic-class-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/magic-class-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/hanjinliu/magic-class
+Home: https://pypi.org/project/magic-class
 
 Package license: BSD-3-Clause
 
 Summary: Generate multifunctional GUIs from classes
+
+Development: https://github.com/hanjinliu/magic-class
 
 Current build status
 ====================
