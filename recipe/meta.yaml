@@ -1,5 +1,5 @@
 {% set name = "magic-class" %}
-{% set version = "0.7.5" %}
+{% set version = "0.7.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 33cee1664b5fc5d91bd189b584c7be0d1a9cbaf218a1045bb2af15ce7cc9461c
+  sha256: 41af1c688ad2eacea8a23e6e387f35f925da150b4dca8945d24c4e95aa91fe6d
 
 build:
   noarch: python
@@ -22,15 +22,26 @@ requirements:
     - pip
     - python >=3.8
   run:
-    - docstring_parser
-    - macro-kit >=0.3.5
-    - magicgui >=0.5.1
+    - docstring_parser >=0.15
+    - macro-kit >=0.4.6
+    - magicgui >=0.8.0
+    - matplotlib-base  # Imported but not declared in requirements
     - numpy
-    - psygnal
+    - psygnal >=0.9.0
     - python >=3.8
+    - qt-command-palette  # Imported but not declared in requirements
     - qtpy >=1.10.0
-    - superqt >=0.4.0
-    - typing-extensions
+    - superqt >=0.6.1
+    - typing-extensions >=4.5.0
+    # Optional extensions
+    # - dask
+    # - napari
+    # - polars
+    # - pyqtgraph
+    # - qtconsole
+    # - vedo
+    # - vispy
+    # - vtk
 
 test:
   imports:
