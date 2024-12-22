@@ -6,13 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 3e7bc5d2223579dbfb42a9b7a293c027e5f3419ffe2841e9ec7cd8354ffbd920
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   script_env:
     - QT_QPA_PLATFORM=offscreen
 
@@ -20,7 +20,7 @@ requirements:
   host:
     - hatchling
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - docstring_parser >=0.15
     - macro-kit >=0.4.6
@@ -28,7 +28,7 @@ requirements:
     - matplotlib-base  # Imported but not declared in requirements
     - numpy
     - psygnal >=0.9.0
-    - python >=3.8
+    - python >={{ python_min }}
     - qt-command-palette  # Imported but not declared in requirements
     - qtpy >=1.10.0
     - superqt >=0.6.1
@@ -52,6 +52,7 @@ test:
   requires:
     - pip
     - pyqt
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/magic-class
