@@ -1,13 +1,13 @@
 {% set name = "magic-class" %}
-{% set version = "0.7.23" %}
+{% set version = "0.7.24" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 2f50c094e0143915bcd9cddb9597b8443431bde74972b33bae0fbd18419e288a
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 6a484286e45a0139f303c8b60ff35d91c10e0289cfd7e23cd02eff4ae2d574cb
 
 build:
   noarch: python
